@@ -37,6 +37,17 @@ profile: 'default'
 
 models:
   my_project:
-    +materialized: table
-    stg_*:  # Apply materialization to all models starting with 'stg_'
-      +materialized: view
+    staging:
+      +schema: dbt_sarojojoye
+      +materialized: table
+      stg_*:  # Apply materialization to all models starting with 'stg_'
+
+    facts:
+      +schema: fact  # Schema for fact models
+      +materialized: table  # Default materialization for fact models
+      fact_*:   # Apply materialization to all models starting with 'fact_'
+
+    dims:
+      +schema: dim  # Schema for dimension models
+      +materialized: table  # Default materialization for dimension models
+      dim_*:   # Apply materialization to all models starting with 'dim_'
