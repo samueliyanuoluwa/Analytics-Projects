@@ -1,8 +1,10 @@
+with source_data as (
+
 select
     Businessid,
     Contentid as Orderid,
     MasterOrderid,
-    Orderstatusid
+    Orderstatusid,
     Customerid,
     Userid,
     TO_TIMESTAMP(Createddate) AS Createddate,
@@ -23,3 +25,6 @@ select
     Ordercancelreason
 from {{ source('main_db', 'Ordermaster') }}
 where COALESCE(status, 0) <> 3 
+
+)
+select * from source_data
