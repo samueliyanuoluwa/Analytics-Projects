@@ -1,0 +1,27 @@
+# models/sources.yml
+
+version: 2
+
+sources:
+  - name: main_db                  # Logical name for the source; can be anything descriptive
+    database: MPLIFY_DWH_DEV       # Snowflake database name
+    schema: MAIN_DB                # Snowflake schema name
+
+    tables:
+      - name: Ordermaster           # Table name in Snowflake
+      - name: Orderdetails
+      - name: Leadpipelinedetails
+      - name: leadpipelinestagemaster
+      - name: Businessuserrole
+      - name: Businesaddressbook
+      - name: Businessstore
+      - name: customeraddress
+      - name: lga_master
+      - name: townmaster
+      - name: citymaster
+      - name: statemaster
+      - name: countrymaster
+
+
+
+       
