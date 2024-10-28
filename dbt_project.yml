@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'my_new_project'
+name: 'test_project'
 version: '1.0.0'
 config-version: 2
 
@@ -35,19 +35,17 @@ profile: 'default'
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 
+# dbt_project.yml
 models:
   my_project:
     staging:
-      +schema: dbt_sarojojoye
+      +schema: staging
       +materialized: table
-      stg_*:  # Apply materialization to all models starting with 'stg_'
+    
+    fact:
+      +schema: fact
+      +materialized: table
 
-    facts:
-      +schema: fact  # Schema for fact models
-      +materialized: table  # Default materialization for fact models
-      fact_*:   # Apply materialization to all models starting with 'fact_'
-
-    dims:
-      +schema: dim  # Schema for dimension models
-      +materialized: table  # Default materialization for dimension models
-      dim_*:   # Apply materialization to all models starting with 'dim_'
+    dim:
+      +schema: dim
+      +materialized: table
