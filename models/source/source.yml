@@ -13,7 +13,7 @@ sources:
       - name: Leadpipelinedetails
       - name: leadpipelinestagemaster
       - name: Businessuserrole
-      - name: Businesaddressbook
+      - name: Businessaddressbook
       - name: Businessstore
       - name: customeraddress
       - name: lga_master
@@ -21,6 +21,8 @@ sources:
       - name: citymaster
       - name: statemaster
       - name: countrymaster
+      - name: Businessmaster
+      - name: CustomerAdress
 
 
 
