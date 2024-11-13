@@ -12,7 +12,7 @@ select
     TO_TIMESTAMP(Createddate) AS Createddate,
     Orderlocationid,
     Ordersource,
-    Totalprice,
+    cast(Totalprice as Bigint) as Totalprice,
     TotalItem,
     CityName,
     Ispushsale,
