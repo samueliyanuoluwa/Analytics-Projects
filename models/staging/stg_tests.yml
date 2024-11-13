@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: stg_order
+    columns:
+      - name: Orderid
+        tests:
+          - unique
+          - not_null
