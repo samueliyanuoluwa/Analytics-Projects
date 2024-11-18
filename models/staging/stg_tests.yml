@@ -10,3 +10,12 @@ models:
       - name: Createddate
         tests:
           - not_null
+  - name: stg_customer
+    columns:
+      - name: Customerid
+        tests:
+          - unique
+          - not_null
+      - name: Customer_Phone
+        tests:
+          - not_null
