@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: stg_order
+    description: one unique orderid and Orderdate per row
     columns:
       - name: Orderid
         tests:
@@ -11,6 +12,7 @@ models:
         tests:
           - not_null
   - name: stg_customer
+    description: one unique Customerid per row
     columns:
       - name: Customerid
         tests:
