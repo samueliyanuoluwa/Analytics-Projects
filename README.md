@@ -61,4 +61,8 @@ Purpose: Validates that the source tables have been updated recently, helping en
 ###### dbt build
 Usage: Runs models, tests, snapshots, and seeds in the correct order.
 Purpose: A comprehensive command that combines the dbt run, dbt test, dbt snapshot, and dbt seed commands into a single command.
+<<<<<<< HEAD
+=======
+
+>>>>>>> ec86ee111c5ea2fa8a639f3be89f4b152d6470b6
 
