@@ -58,7 +58,7 @@ Purpose: Ensures all packages specified in packages.yml are downloaded and avail
 Usage: Checks the freshness of data sources.
 Purpose: Validates that the source tables have been updated recently, helping ensure data timeliness.
 
-###### bt build (Introduced in dbt v0.21.0)
+###### dbt build
 Usage: Runs models, tests, snapshots, and seeds in the correct order.
 Purpose: A comprehensive command that combines the dbt run, dbt test, dbt snapshot, and dbt seed commands into a single command.
 
